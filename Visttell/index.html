@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Output"></div>
+    <button onclick="setNum7()">Click -</button>
+    <button onclick="setNum21()"> Click +</button>
+    <script>
+        // var number = 5; //int
+        // var floatnumber = 5.5; //kommatall
+        // var text = "En tekst bit"; //string
+        // var enkeltTegn = 'a'; //char
+        // var booleans = true; //booleans
+
+        var outputDiv = document.getElementById('Output');
+        var numToShow = 0;
+
+        function setNum7(){
+            // numToShow--;
+            numToShow -= 1;
+            outputDiv.innerHTML =numToShow;
+        }
+
+        function setNum21(){
+            // numToShow++;
+            numToShow += 1;
+            outputDiv.innerHTML = numToShow;
+        }
+    </script>
+</body>
+</html>
