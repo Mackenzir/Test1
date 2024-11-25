@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafikklys med Timer</title>
+    <style>
+        #trafikklys{
+            width: 200px;
+            height: 600px;
+            background-color: #000000;
+            border-radius: 5em;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 15px;
+        }
+       
+        .rød {
+            background-color: red;
+            opacity: 10%;
+        }
+        .orange{
+            background-color: orange;
+            opacity: 10%;
+        }
+        .grønn{
+            background-color: green;
+            opacity: 10%;
+        }
+        .sirkel{
+            box-shadow: -5px 10px 20px 10px black inset ;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            
+        }
+        .active{
+            opacity: 100%;
+        }
+    
+    </style>
+</head>
+<body onload="lightTimer()">
+
+    <div id="trafikklys">
+        <div id="rød" class="rød sirkel"></div>
+        <div id="orange" class="orange sirkel"></div>
+        <div id="grønn" class="grønn sirkel"></div>
+    </div>
+
+    <button onclick="activeLight('grønn', 'orange', 'rød', 'rød')">rød</button>
+    <button onclick="activeLight('grønn','grønn', 'rød', 'orange')">rød og orange</button>
+   
+    <button onclick="activeLight('rød', 'orange', 'grønn', 'grønn')">grønn</button>
+    <button onclick="activeLight('rød', 'grønn', 'orange', 'orange')">orange</button>
+
+    <script>
+        function activeOrange(){
+            activeLight('rød', 'grønn', 'orange', 'orange'); 
+        } 
+
+        function lightTimer(){
+            setTimeout(activeRed, 1000)
+        }
+
+        function activeGreen(){
+            activeLight('rød', 'orange', 'grønn', 'grønn');
+            setTimeout(activeOrange, 2000);
+        }
+      
+
+        function activeLight(divId1, divId2, divId3, divId4){
+            document.getElementById(divId1).classList.remove("active");
+            document.getElementById(divId2).classList.remove("active");
+            document.getElementById(divId3).classList.add("active");
+            document.getElementById(divId4).classList.add("active");
+        }
+        function activeRed(){
+            activeLight('grønn', 'orange', 'rød', 'rød');
+            setTimeout(activeRedAndOrange, 1000)
+
+        }
+
+        function activeRedAndOrange(){
+            activeLight('grønn','grønn', 'rød', 'orange')
+            setTimeout(activeGreen, 1000)
+        }
+
+    </script>
+    
+</body>
+
+</html>

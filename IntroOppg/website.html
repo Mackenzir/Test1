@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Website</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Vortex</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <span>Vortex</span></h1>
+            <p>We provide cutting-edge solutions for modern businesses.</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    At MyBrand, we pride ourselves on delivering innovative services tailored to your needs. 
+                    Our team of experts ensures your success with modern, high-quality solutions.
+                </p>
+            </div>
+            <img src="https://cdn.discordapp.com/attachments/709796859626913843/1296574246948175907/stare-down-mahoraga-vs-sukuna-by-v0-38bb4qhhxaqc1.png?ex=67458a1d&is=6744389d&hm=8e808a73ad4f48a1d448e68f7db1ae6241af1d2ed7b4358032983913a3f8da26&" alt="About us image" class="about-image">
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Consulting</h3>
+                <p>Expert guidance to streamline your business processes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Development</h3>
+                <p>Custom software solutions designed for scalability.</p>
+            </div>
+            <div class="service-card">
+                <h3>Support</h3>
+                <p>Reliable technical support to ensure seamless operations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <p>"MyBrand transformed our operations. Highly recommend!"</p>
+                <span>- Alex R.</span>
+            </div>
+            <div class="carousel-item">
+                <p>"Exceptional service and outstanding results."</p>
+                <span>- Jamie L.</span>
+            </div>
+            <div class="carousel-item">
+                <p>"Our go-to partner for innovative solutions."</p>
+                <span>- Chris M.</span>
+            </div>
+        </div>
+        <button class="carousel-button prev" aria-label="Previous">‹</button>
+        <button class="carousel-button next" aria-label="Next">›</button>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        <p id="formResponse" class="form-response"></p>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 MyBrand. All rights reserved.</p>
+    </footer>
+    <script src="website.js"></script>
+</body>
+</html>
