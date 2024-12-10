@@ -20,22 +20,35 @@ button {
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
 }
-button:hover {
-  background-color: rgb(4, 152, 165);
-  transition: 0.3s;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 0 0 12px transparent;
+button {
+    font-size: 0.7rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #fafafa;
+    background: #252525;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+    color:red
+    
+  
 }
-button:active { 
-    scale: 0.95;
-    box-shadow: 0 0 0 4px greenyellow;
+button:hover {
+   color: red;
 }
 
 .mamaGlockChi {
-background: #093e02;
+background: #3d3d3d6c;
 padding: 30px;
 border: 61px solid #ffffff33;
-border-color: #840018;
+border-color: gold;
 width: 450px;
 margin: 20px;
 border-radius: 309px;
